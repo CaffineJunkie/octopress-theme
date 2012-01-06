@@ -25,15 +25,23 @@
             echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
 
         ?></title>
-    <meta name="author" content="">
-    <meta name="description" content="">
+    <meta name="author" content="盘先海">
+    <?php
+    if(FALSE){
+    ?>
+        <meta name="keywords" content="<?php tag_to_keywords()?>">
+        <meta name="description" content="<?php content_to_meta();?>">
+    <?php } else { ?>
+        <meta name="keywords" content="wordpress theme, wordpress plugin, 盘先海, 博客">
+        <meta name="description" content="这是盘先海的个人博客，写一些关于生活，wordpress，编程相关的文章">
+    <?php }
+    ?>
+
 
     <!-- http://t.co/dKP3o1e -->
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="canonical" href="http://lucifr.com/2011/12/08/caffeinated-another-google-reader-app-for-mac">
     <link rel="shortcut icon" type="image/ico" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
     <script src="<?php echo get_template_directory_uri(); ?>/javascripts/modernizr-2.0.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/javascripts/ender.js"></script>
@@ -42,6 +50,12 @@
     <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
     <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+    <script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/solarized_dark.min.css">
+    <script>
+        hljs.tabReplace = '    ';
+        hljs.initHighlightingOnLoad();
+    </script>
     <?php if ( is_singular() && get_option('thread_comments') ) wp_enqueue_script('comment-reply'); ?>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="stylesheet" type="text/css" media="screen, projection" href="<?php bloginfo('stylesheet_url'); ?>" />
@@ -69,7 +83,5 @@
         <?php wp_list_pages('sort_column=menu_order&title_li='); ?>
     </ul>
 </nav>
-
-
 <div id="main">
     <div id="content">

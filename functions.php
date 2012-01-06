@@ -81,3 +81,24 @@ function twentyeleven_comment( $comment, $args, $depth ) {
     endswitch;
 }
 endif; // ends check for twentyeleven_comment()
+/*
+function tag_to_keywords(){
+    global $post;
+    $tags = get_the_tags($post->ID);
+    if(count($tags) > 0) {
+        $keywords = '';
+        foreach( $tags as $tag) {
+            $keywords .= $tag->name . ', ';
+        }
+        $keywords = substr($keywords, 0, -2);
+        echo $keywords;
+    }
+}
+
+function content_to_meta(){
+    global $post;
+    $content = $post->content;
+    $key = mb_substr($content, 0, 15, 'UTF-8');
+    echo $key;
+}
+*/

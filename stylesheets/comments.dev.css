@@ -28,3 +28,10 @@
 #commentform p {
     margin: 0;
 }
+
+code {
+    border-radius: 0.4em;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace;
+}
