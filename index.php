@@ -36,6 +36,11 @@
             <?php _e('Sorry, no posts matched your criteria.'); ?>
         </article>
     <?php endif; ?>
+
+        <div class="pagination">
+            <?php posts_nav_link(); ?>
+        </div>
+
     </div>
 
 <?php get_sidebar();?>
