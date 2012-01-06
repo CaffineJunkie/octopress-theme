@@ -1,0 +1,30 @@
+#comments {}
+#comments .commentlist,
+#comments .commentlist ul{
+    list-style: none;
+}
+#comments .comment-meta {
+    margin: 0;
+    padding: 0;
+}
+#comments .comment-content p {
+    margin: 0;
+    color: #666;
+}
+#comments .comment {
+    position: relative;
+}
+#comments .comment .comment-author img {
+    position: absolute;
+    top: 1em;
+    right: 0;
+}
+.depth-1 {
+    padding-bottom: 20px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAYAAACsXeyTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQIHWNIS0sr/v//PwMMDzY+ADqMahlW4J91AAAAAElFTkSuQmCC") repeat-x scroll left bottom transparent;
+}
+
+#commentform {}
+#commentform p {
+    margin: 0;
+}

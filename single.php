@@ -24,12 +24,16 @@
                         <?php the_category(', '); ?>
                     </span>
             </p>
-            <p class="meta">
-                <?php previous_post_link('%link'); ?>
-                <?php next_post_link('%link'); ?>
+            <p class="meta sharing">
+                <?php previous_post_link('上一篇： %link'); ?>
+                <?php next_post_link('下一篇： %link'); ?>
             </p>
         </footer>
     </article>
+
+    <section>
+        <?php comments_template( '', true ); ?>
+    </section>
 
     <?php endwhile; else: ?>
     <article class="hentry" role="article">

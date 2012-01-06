@@ -21,12 +21,16 @@
                 <span class="byline author vcard">Posted by <span class="fn"><?php the_author();?></span></span>
                 <time datetime="<?php echo date('c', get_the_time('G')); ?>" pubdate data-updated="true"><?php the_time('F jS, Y') ?></time>
             </p>
-            <p class="meta">
-                <?php previous_post_link('%link'); ?>
-                <?php next_post_link('%link'); ?>
+            <p class="meta sharing">
+                <span class="basic-alignment left"><?php previous_post_link('上一篇： %link'); ?></span>
+                <span class="basic-alignment left"><?php next_post_link('下一篇： %link'); ?></span>
             </p>
         </footer>
     </article>
+
+    <section>
+        <?php comments_template( '', true ); ?>
+    </section>
 
     <?php endwhile; else: ?>
     <article class="hentry" role="article">
